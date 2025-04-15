@@ -1,1 +1,32 @@
 
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online TV</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #111; color: #fff; text-align: center; }
+    h1 { margin-top: 30px; }
+    iframe { width: 90%; max-width: 800px; height: 450px; margin-top: 20px; border: none; }
+    .channel-buttons { margin-top: 20px; }
+    button { margin: 5px; padding: 10px 20px; border: none; background: #444; color: white; cursor: pointer; border-radius: 5px; }
+    button:hover { background: #666; }
+  </style>
+</head>
+<body>
+  <h1>Դիտիր Online TV</h1>
+  <div class="channel-buttons">
+    <button onclick="changeChannel('https://example.com/player1')">ՀԱԼԱՑ Channel 1</button>
+    <button onclick="changeChannel('https://example.com/player2')">ՀԱԼԱՑ Channel 2</button>
+    <!-- Ավելացրու քո ալիքները այստեղ -->
+  </div>
+  <iframe id="tvPlayer" src="https://example.com/player1" allowfullscreen></iframe>
+
+  <script>
+    function changeChannel(url) {
+      document.getElementById('tvPlayer').src = url;
+    }
+  </script>
+</body>
+</html>
